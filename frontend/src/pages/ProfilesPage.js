@@ -1,4 +1,5 @@
 // Imports
+import { Link, Outlet } from "react-router-dom";
 
 
 export default function Profiles() {
@@ -12,12 +13,18 @@ export default function Profiles() {
   ];
 
   return (
-    <div className="Home">
-      <header className="Home-header">
-        <p>
-          Profiles Page 
-        </p>
-      </header>
+    <div className="">
+        <div className="">
+            {profiles.map(profile => (
+              <Link key={profile.id} to={`/profiles/${profile.id}`}>
+                  Profile {profile.name}
+              </Link>
+            ))}
+        </div>
+
+        <Outlet />
+
+        <Link className="button" to="/">Go to Home</Link>
     </div>
   )
 }

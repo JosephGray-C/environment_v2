@@ -1,14 +1,15 @@
 // Imports
- 
+import { Link } from "react-router-dom";
+
 
 export default function App() {
   return (
-    <div className="Home">
-      <header className="Home-header">
+    <div className="">
         <p>
           Home Page
         </p>
-      </header>
+
+        <Link className="button" to="/profiles">Go to Profiles</Link>
     </div>
   );
 }

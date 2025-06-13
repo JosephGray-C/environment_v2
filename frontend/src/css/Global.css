@@ -1,24 +1,3 @@
-.Home {
-  /* Text */
-  text-align: center;
-}
-
-.Home-header {
-  /* Background */
-  background-color: #282c34;
-  min-height: 100vh;
-
-  /* Text */
-  color: white;
-  font-size: calc(10px + 2vmin);
-
-  /* Items */
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-}
-
 .button {
   background-color: #0b2961;
   color: #fff;

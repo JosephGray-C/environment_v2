@@ -5,12 +5,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // Importing CSS
 import './css/index.css';
-import './css/Home.css';
+import './css/Global.css';
 
 // Importing pages
 import Home from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
 import ProfilesPage from './pages/ProfilesPage';
+import ProfilePage from './pages/ProfilePage';
 
 // Route configuration
 const router = createBrowserRouter([
@@ -23,9 +24,14 @@ const router = createBrowserRouter([
     {
         path: '/profiles',
         element: <ProfilesPage />,
-        errorElement: <NotFoundPage />,
-    }
-    
+        children: [
+            {
+                path: '/profiles/:id',
+                element: <ProfilePage />,
+            },
+        ]
+    },
+   
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -7,14 +7,13 @@ export default function NotFound() {
 
 
   return (
-    <div className="Home">
-      <header className="Home-header">
+    <div className="">
         <p>
           404 Not Found
         </p>
+
         <Link className="button" to="/">Go to Home</Link>
-        <a className="button"  href="/">Go to Home (without React Router)</a>
-      </header>
+        {/* <a className="button"  href="/">Go to Home (without React Router)</a> */}
     </div>
   )
 }
