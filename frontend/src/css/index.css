@@ -10,5 +10,28 @@ body {
 body{
   background-color: #282c34;
   color: white;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(15px + 1vmin);
+}
+
+/* ***************** */
+h1 {
+  text-align: center;
+}
+
+.center{
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+img
+{
+  max-width: 100%;
+  height: auto;
+}
+
+/* ***************** */
+.not-found{
+  text-align: center;
+  text-decoration: none;
 }
