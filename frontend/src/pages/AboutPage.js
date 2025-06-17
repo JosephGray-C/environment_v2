@@ -1,12 +1,12 @@
 // Imports
-import logo from "../images/bioesencia-logo.jpg"; // Ensure the image path is correct
+import logo from "../assets/bioesencia-logo.jpg"; // Ensure the image path is correct
 
 export default function AboutPage() {
     return (
         <>
             <div className="center">
                 <h1>
-                    About us
+                    About Us
                 </h1>
 
                 <img src={logo} alt="About Us" className="" />

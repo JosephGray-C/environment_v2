@@ -8,6 +8,7 @@ export default function Header() {
       <nav className="header-nav">
         <Link className="header-link" to="/">Home</Link>
         <Link className="header-link" to="/about">About Us</Link>
+        <Link className="header-link" to="/users">Users</Link>
         <Link className="header-link" to="/null">Other</Link>
       </nav>
     </header>

@@ -50,5 +50,9 @@
   position: fixed; 
   left: 0;         
   bottom: 0;        
-  margin-top: 40px;
+}
+
+/* Space for the main so the data do not overfolw under the footer*/
+main {
+  margin-bottom: 4rem;
 }

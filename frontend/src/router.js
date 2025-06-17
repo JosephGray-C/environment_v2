@@ -2,10 +2,11 @@
 import { createBrowserRouter } from 'react-router-dom';
 
 // Importing pages
-import Home from './pages/HomePage';
-import NotFoundPage from './pages/NotFoundPage';
 import Layout from './pages/templates/Layout';
+import NotFoundPage from './pages/NotFoundPage';
+import Home from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
+import UsersPage from './pages/UsersPage';
 
 // Route configuration
 const router = createBrowserRouter([
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
                 path: 'about',
                 element: <AboutPage/>,
             },
+            {
+                path: 'users',
+                element: <UsersPage/>
+            }
         ],
     }
 
