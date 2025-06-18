@@ -2,6 +2,7 @@ package com.bioesencia.backend.tester.usuario;
 
 import com.bioesencia.backend.model.*;
 import com.bioesencia.backend.repository.UsuarioRepository;
+import com.bioesencia.backend.service.UsuarioService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,11 +14,11 @@ import java.time.LocalDateTime;
 public class TesterRegistrarUsuario {
 
     @Autowired
-    private UsuarioRepository usuarioRepository;
+    private UsuarioService usuarioService;
 
     @Test
     public void registrarUsuario() {
-        Usuario u = Usuario.builder()
+        Usuario usuario = Usuario.builder()
                 .nombre("Ana")
                 .apellido("Morales")
                 .email("ana@bio.com")
@@ -28,7 +29,7 @@ public class TesterRegistrarUsuario {
                 .activo(true)
                 .build();
 
-        usuarioRepository.save(u);
-        System.out.println("✔ Usuario registrado con ID: " + u.getId());
+        Usuario guardado = usuarioService.registrar(usuario);
+        System.out.println("✅ Password en DB: " + guardado.getPassword());
     }
 }
